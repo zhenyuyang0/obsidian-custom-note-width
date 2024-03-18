@@ -1,8 +1,66 @@
-/*
+#custom-note-width-slider {
+	margin: 0px;
+	padding: 7px;
+	margin-right: -4px;
+	margin-bottom: 1px;
+	/* removing default appearance */
+	-webkit-appearance: none;
+	appearance: none; 
+	/* creating a custom design */
+	width: 100%;
+	cursor: pointer;
+	outline: none;
+	/*  slider progress trick  */
+	overflow: hidden;
+	border-radius: 16px;
+	background: #262626;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+#custom-note-width-slider::-webkit-slider-runnable-track {
+	height: 15px;
+	background: #363636 ;
+	border-radius: 16px;
+	margin-bottom: 1px;
+}
 
-If your plugin does not need CSS, delete this file.
+#custom-note-width-slider::-moz-range-track {
+	height: 15px;
+	background: #363636;
+	border-radius: 16px;
+	margin-bottom: 1px;
+}
 
-*/
+#custom-note-width-slider::-webkit-slider-thumb {
+	/* removing default appearance */
+	-webkit-appearance: none;
+	appearance: none; 
+	/* creating a custom design */
+	height: 13.9px;
+	margin-top: 7.083px;
+	width: 13.9px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 3.5px solid #666666;
+	/*  slider progress trick  */
+	box-shadow: -407px 0 0 400px #666666;
+  }
+
+#custom-note-width-slider::-moz-range-thumb {
+	height: 15px;
+	width: 15px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 1px solid #666666;
+	/*  slider progress trick  */
+	box-shadow: -407px 0 0 400px #666666;
+	margin-bottom: 1px;
+}
+
+
+#custom-note-width-slider-value {
+	text-align: center;
+	margin-bottom: 1px;
+	padding: 0px;
+	min-width: 3ch;
+	color: #b3b3b3;
+}

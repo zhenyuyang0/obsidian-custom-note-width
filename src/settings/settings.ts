@@ -4,58 +4,53 @@ import {
 	Setting,
 } from 'obsidian';
 
-import EditorWidthSlider from "../main";
-import { EditorWidthSliderSettings } from 'src/types/settings';
+import NoteWidthSlider from "../main";
+import { NoteWidthSliderSettings } from 'src/types/settings';
 
 // ---------------------------- Storing Information ----------------------------
 // the default value of the thing you want to store 
-export const DEFAULT_SETTINGS: EditorWidthSliderSettings = {
-	sliderPercentage: '20',
-	sliderPercentageDefault: '20',
-	sliderWidth: '150'
+export const DEFAULT_SETTINGS: NoteWidthSliderSettings = {
+	defaultNoteWidth: 42,
+	sliderLength: 200
 }
 // ---------------------------- Storing Information ----------------------------
 
-export class EditorWidthSliderSettingTab extends PluginSettingTab {
-	plugin: EditorWidthSlider;
+export class NoteWidthSliderSettingTab extends PluginSettingTab {
+	plugin: NoteWidthSlider;
 
-	constructor(app: App, plugin: EditorWidthSlider) {
+	constructor(app: App, plugin: NoteWidthSlider) {
 		super(app, plugin);
 		this.plugin = plugin;
 	}
-	// this.settings.sliderWidth
+	// this.settings.sliderLength
 	display(): void {
 		const {containerEl} = this;
 
 		containerEl.empty();
 
 		new Setting(containerEl)
-			.setName('Slider Width')
-			.setDesc('How wide do you want your slider to be?')
+			.setName('Slider Length')
+			.setDesc('The length in px of the slider in the status bar.')
 			.addText(text => text
-				.setPlaceholder('Slider width in px')
-				.setValue(this.plugin.settings.sliderWidth)
+				.setPlaceholder('length in px')
+				.setValue(this.plugin.settings.sliderLength.toString())
 				.onChange(async (value) => {
-					this.plugin.settings.sliderWidth = value;
-					this.plugin.updateSliderStyle();
+					this.plugin.settings.sliderLength = +value;
+					this.plugin.updateSliderLength();
 					await this.plugin.saveSettings();
 				}));
 
 		new Setting(containerEl)
-			.setName('Slider Default Percentage')
-			.setDesc('What do you want the default percentage of the slider to be?')
+			.setName('Default Note Width')
+			.setDesc('The default note width in vw.')
 			.addText(text => text
-				.setPlaceholder('Slider width in px')
-				.setValue(this.plugin.settings.sliderPercentageDefault)
+				.setPlaceholder('width in vw')
+				.setValue(this.plugin.settings.defaultNoteWidth.toString())
 				.onChange(async (value) => {
-					this.plugin.settings.sliderPercentageDefault = value;
-					this.plugin.updateSliderStyle();
+					this.plugin.settings.defaultNoteWidth = +value;
+					// this.plugin.updateSliderLength();
 					await this.plugin.saveSettings();
 				}));
-
-        new Setting(containerEl)
-            .setName('Note:')
-            .setDesc('The field should be named "editor-width" in the YAML frontmatter of the note in order to customize the editor width of that repective note. It won\'t work globally for all notes unless you specify it in each note\'s frontmatter.');
 
 	}
 }

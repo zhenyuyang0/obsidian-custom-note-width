@@ -1,11 +1,11 @@
 {
-	"id": "editor-width-slider",
-	"name": "Editor Width Slider",
-	"version": "1.0.5",
+	"id": "obsidian-custom-note-width",
+	"name": "Custom Note Width",
+	"version": "1.0.6",
 	"minAppVersion": "0.15.0",
-	"description": "Customize Obsidian's editor width with a slider for a tailored editing experience.",
-	"author": "@MugishoMp",
-	"authorUrl": "https://github.com/MugishoMp",
-	"fundingUrl": "https://www.paypal.com/donate/?hosted_button_id=E4APAMMHVJE4N",
+	"description": "A plugin for Obsidian.md that customizes the line width of individual notes.",
+	"author": "@joel-y85",
+	"authorUrl": "https://github.com/joel-y85",
+	"fundingUrl": "https://www.paypal.com/donate/?business=52H646DNTSPRU&no_recurring=0&item_name=Buy+me+a+Boba&currency_code=USD",
 	"isDesktopOnly": true
 }
