@@ -183,7 +183,7 @@ export default class NoteWidthSlider extends Plugin {
 	updateSliderProgress(width: number) {
 		const slider = document.getElementById("custom-note-width-slider");
 		if(slider)
-			slider.innerText = width.toString();
+			slider.value = width.toString();
 	  }
 
 	// Update slider text
