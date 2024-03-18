@@ -6,6 +6,7 @@
 | Adjusts note margin  | Adjusts line width  | The note width only resizes when the window's width is smaller than the note's width.|
 | Need to manually set front matter property to store individual note width  | Changing the slider automatically saves the width to the note's front matter | No need to manually enter the note width again.|
 
+**Note! the app needs to be reloaded after disabling the plugin.**
 
 ## Feedback and Support
 
