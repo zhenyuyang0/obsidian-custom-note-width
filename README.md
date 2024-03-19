@@ -10,7 +10,7 @@
 - Customize and save individual note's width with a slider in the status bar
 - Set the note's width to default by clicking the slider number
 
-**Note! In order to change the note's width back to Obsidian default, reload the app after disabling the plugin.**
+**Note! After disabling the plugin, reload the app to change the note widths back to Obsidian default.**
 
 ## Feedback and Support
 
