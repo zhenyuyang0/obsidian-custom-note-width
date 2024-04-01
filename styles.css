@@ -5,7 +5,7 @@
 	margin-bottom: 1px;
 	/* removing default appearance */
 	-webkit-appearance: none;
-	appearance: none; 
+	appearance: none;
 	/* creating a custom design */
 	width: 100%;
 	cursor: pointer;
@@ -18,7 +18,7 @@
 
 #custom-note-width-slider::-webkit-slider-runnable-track {
 	height: 15px;
-	background: #363636 ;
+	background: #363636;
 	border-radius: 16px;
 	margin-bottom: 1px;
 }
@@ -33,17 +33,18 @@
 #custom-note-width-slider::-webkit-slider-thumb {
 	/* removing default appearance */
 	-webkit-appearance: none;
-	appearance: none; 
+	appearance: none;
 	/* creating a custom design */
 	height: 13.9px;
 	margin-top: 7.083px;
 	width: 13.9px;
 	background-color: #fff;
+	cursor: pointer;
 	border-radius: 50%;
 	border: 3.5px solid #666666;
 	/*  slider progress trick  */
 	box-shadow: -407px 0 0 400px #666666;
-  }
+}
 
 #custom-note-width-slider::-moz-range-thumb {
 	height: 15px;

@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-custom-note-width",
 	"name": "Custom Note Width",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"minAppVersion": "0.15.0",
 	"description": "A plugin for Obsidian.md that customizes the line width of individual notes.",
 	"author": "@joel-y85",

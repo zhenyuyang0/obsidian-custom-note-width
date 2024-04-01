@@ -1,4 +1,4 @@
-import { 
+import {
 	App,
 	PluginSettingTab,
 	Setting,
@@ -10,7 +10,7 @@ import { NoteWidthSliderSettings } from 'src/types/settings';
 // ---------------------------- Storing Information ----------------------------
 // the default value of the thing you want to store 
 export const DEFAULT_SETTINGS: NoteWidthSliderSettings = {
-	defaultNoteWidth: 42,
+	defaultNoteWidth: 47,
 	sliderLength: 200
 }
 // ---------------------------- Storing Information ----------------------------
@@ -24,7 +24,7 @@ export class NoteWidthSliderSettingTab extends PluginSettingTab {
 	}
 	// this.settings.sliderLength
 	display(): void {
-		const {containerEl} = this;
+		const { containerEl } = this;
 
 		containerEl.empty();
 
@@ -42,9 +42,9 @@ export class NoteWidthSliderSettingTab extends PluginSettingTab {
 
 		new Setting(containerEl)
 			.setName('Default Note Width')
-			.setDesc('The default note width in vw.')
+			.setDesc('The default note width in px.')
 			.addText(text => text
-				.setPlaceholder('width in vw')
+				.setPlaceholder('width in px')
 				.setValue(this.plugin.settings.defaultNoteWidth.toString())
 				.onChange(async (value) => {
 					this.plugin.settings.defaultNoteWidth = +value;
